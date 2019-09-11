@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Template</title>
+        <link rel="stylesheet" href="css/micss.css">
+
+        <script>
+            function sumar(num1, num2){
+                alert("La suma es: " + (num1 + num2));
+            }
+            function restar(num1, num2){
+                alert("La resta es: " + (num1 -num2));
+            }
+            function multiplicar(num1, num2){
+                alert("La multiplicacion es: " + (num1 * num2));
+            }
+            function dividir(num1, num2){
+                alert("La division es: " + (num1 / num2));
+            }
+
+            var operacion = prompt("Que operacion quieres realizar:?")
+            var num1 = parseInt(prompt("Introduce el primer numero"));
+            var num2 = parseInt(prompt("Introduce el segundo numero"));
+            
+            if (operacion == "suma"){
+                sumar(num1,num2);
+            }
+            else if(operacion == "resta"){
+                restar(num1,num2);
+            }
+            else if(operacion == "multiplicacion"){
+                multiplicar(num1,num2);
+            }
+            else if(operacion == "division"){
+                dividir(num1,num2);
+            }
+            else{
+                alert("Operacion equivocada");
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

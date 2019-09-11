@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Template</title>
+    <link rel="stylesheet" href="css/micss.css" />
+
+    <script>
+      function today_is() {
+          var today = new Date();
+          document.write(today.toDateString());
+      }
+      
+    </script>
+  </head>
+  <body>
+    <h1><strong>What day is it today?</strong></h1>
+    <p>Today is: <script>today_is();</script></p>
+  </body>
+</html>

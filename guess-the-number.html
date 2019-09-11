@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Template</title>
+    <link rel="stylesheet" href="css/micss.css" />
+  </head>
+  <body>
+    <table width="25%" border="0">
+      <tr>
+        <td>
+          <label for="textfield">
+            <input type="text" name="textfield" id="c_message" />
+          </label>
+        </td>
+        <td>
+          <label for="textfield2">
+            <input type="text" name="textfield2" id="c_tries" />
+          </label>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      var randomNumber = Math.round(Math.random() * 100);
+
+      var guessNumber = 0,
+        tries = 0;
+      var timesTried = document.getElementById("c_tries");
+      var messageGiven = document.getElementById("c_message");
+
+      do {
+        guessNumber = prompt("Type a number in between 0 and 100");
+        if (randomNumber > guessNumber) {
+          messageGiven.value = "Number is higher";
+        } else if (randomNumber < guessNumber) {
+          messsageGiven.value = "Number is lower";
+        }
+        tries++;
+        timesTried.value = tries;
+      } while (randomNumber != guessNumber);
+    </script>
+  </body>
+</html>
