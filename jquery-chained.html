@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!-- <link href="css/micss.css" rel="stylesheet" > -->
+    <style>
+      #anuncio {
+        background-color: #000;
+        color: #fff;
+        font-size: 24px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#anuncio")
+          .width(500)
+          .height(500)
+          .text("Vende!")
+          .hide()
+          .fadeIn(10000);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="anuncio">
+      COMPRA!
+    </div>
+  </body>
+</html>

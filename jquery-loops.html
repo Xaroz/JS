@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!-- <link href="css/micss.css" rel="stylesheet" > -->
+
+    <style>
+      #banner {
+        background-color: #f00;
+        width: 450px;
+        height: 300px;
+        position: absolute;
+        left: 400px;
+        top: 50px;
+        font-size: 36px;
+        text-align: center;
+      }
+      img {
+        float: left;
+        margin: 15px;
+        width: 350px;
+        height: 200px;
+      }
+      #sustitucion{
+        float: left;
+        margin: 15px;
+        width: 350px;
+        height: 200px;
+        font-size: 36px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        // var z = document.getElementById("cerrar");
+        // z.addEventListener("click",cerrar_banner,false); 
+        document.getElementById("cerrar").addEventListener("click", cerrar_banner,false);
+        document.getElementById("imagen1").addEventListener("click",carrito,false);
+
+      });
+      function cerrar_banner(){
+        $("#banner").remove();
+      }
+      function carrito(){
+        $("#imagen1").replaceWith("<div class id='sustitucion'> Agregado al carrito </div>")
+      }
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      THIS IS AN AD
+      <p id="cerrar">Cerrar</p>
+    </div>
+    <div id="carrete">
+      <img src="imgs/arbol.jpg" id="imagen1" />
+      &nbsp;
+      <img src="imgs/ganando.jpg" id="imagen2" />
+      &nbsp;
+      <img src="imgs/mountain.jpg" id="imagen3" />
+      &nbsp;
+      <img src="imgs/forest.jpg" id="imagen4" />
+    </div>
+
+    <!-- <script>
+      var imagenes = document.querySelectorAll("#carrete img");
+
+      for (var i = 0; i < imagenes.length; i++) {
+        imagenes[i].style.visibility = "hidden";
+      }
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!-- <link href="css/micss.css" rel="stylesheet" > -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        document
+          .getElementById("imagen1")
+          .addEventListener("mouseover", changeImage, false);
+        document
+          .getElementById("imagen1")
+          .addEventListener("mouseout", restoreImage, false);
+      });
+
+      function changeImage() {
+        $("img").attr("src", "imgs/forest.jpg");
+      }
+      function restoreImage() {
+        $("img").attr("src", "imgs/arbol.jpg");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="carrete">
+      <img src="imgs/arbol.jpg" id="imagen1" />
+    </div>
+  </body>
+</html>
