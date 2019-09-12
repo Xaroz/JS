@@ -30,14 +30,15 @@
       document.addEventListener("DOMContentLoaded", function() {
         document
           .getElementById("noticias")
-          .addEventListener("click", async(e) => {
+          .addEventListener("click", async e => {
             e.preventDefault();
-            let response = await fetch(
-              "http://127.0.0.1:5500/AJAX/generales.html"
-            );
-            response.text().then(result => {
-              document.getElementById("contenidos_externos").innerHTML = result;
-            });
+            let response = await fetch(e.target);
+            // let response = await fetch("http://127.0.0.1:5500/AJAX/generales.html");
+            // response.text().then(result => {
+            //   document.getElementById("contenidos_externos").innerHTML = result;
+            // });
+            let commit = await response.text();
+            document.getElementById("contenidos_externos").innerHTML = commit;
           });
       });
     </script>
