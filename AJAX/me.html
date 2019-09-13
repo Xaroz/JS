@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link href="/css/micss.css" rel="stylesheet" />
+    <script>
+      document.addEventListener("DOMContentLoaded", async e => {
+        alert("Hola");
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/todos"
+        );
+        let json = await response.json();
+        alert(typeof(json));
+        json.forEach(element => {
+            console.log(element);
+        });
+        
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
